@@ -11,7 +11,7 @@ for (let i = 0; i < techBtn.length; i++){
     let botao = techBtn[i]
     const idTecla = botao.classList[1]
 
-    botao.addEventListener("click", ()=>{
+    botao.addEventListener("mouseover", ()=>{
         switch(i){
             case 0:
                 linha = ["GitHub", "<strong> GitHub </strong> é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o <strong> Git </strong>, permitindo que os programadores ou qualquer usuário da plataforma contribuam em projetos privados e/ou Open Source em qualquer lugar do mundo.", "rating: 9.0"]
