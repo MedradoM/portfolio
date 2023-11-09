@@ -47,9 +47,16 @@ for (let i = 0; i < techBtn.length; i++){
         break;
         }
 
+        botao.addEventListener("mouseleave", ()=>{
+            linha = ["Skills", "<strong> Passe o mouse sobre minhas habilidades para ter mais detalhes </strong>", ""]
+            mudaTexto(linha)
+        })
 
         
     })
+
+
+
 }
 
 function mudaTexto (linha,) {

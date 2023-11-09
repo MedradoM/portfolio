@@ -8,13 +8,13 @@
     --second: #08085E;
     --placeholder: #45474B;
     --anti-placeholder: #A9A9A9;
-    --bkc_last: rgba(0,18,3,1);
+    --bkc_last: hwb(129 0% 87%);
 
     --deg: #39FF14;
     --dog: #99F3BD;
 
     --Pattern: url("./images/Group 1Pattern Branco 10_.png");
-    --background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(2,2,6,1) 30%, rgba(0,18,3,1) 100%);
+    --background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(2,2,6,1) 30%, hwb(129 0% 87%) 100%);
 }
 
 [color-mode="white"]{
@@ -74,14 +74,19 @@ body{
 /*---------------------------------header--------------------------------*/
 
 #header{
-    padding: 25px;
+    padding: 25px 0;
     position: fixed;
-    width: 98%;
+    width: 100%;
     z-index: 999;
+    
 }
 
 .headerStyle{
     background-color: var(--bkc);    
+}
+
+#logo{
+    padding-left: 30px;
 }
 
 .header__list img{
@@ -98,6 +103,7 @@ body{
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-right: 10px;
 }
 
 .header__list__ul{
@@ -136,6 +142,7 @@ body{
 
 .blk__wth{
     width: 50px;
+
 }
 
 .header__list__form button{
@@ -178,6 +185,12 @@ body{
 
 .mid__saudacao{
     padding: 300px 0 300px 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mid__saudacao p{
+    padding: 15px 0 50px 0;
 }
 
 .mid__button{
@@ -212,6 +225,7 @@ body{
     &:hover {
         box-shadow: 0 0 40px 40px var(--deg) inset, 0 0 0 0 var(--deg);
       color: var(--bkc);
+      border-radius: 10px;
     }
 }
 
@@ -321,7 +335,7 @@ body{
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1% 2%;
     display: inline-block;
     border-radius: 100px;
     transition: all .2s;
@@ -479,7 +493,7 @@ body{
     list-style: none;
     flex-basis: 50%;
     box-sizing: border-box;
-    padding: 2%;
+    padding: 6%;
 }
 
 .servicos__desc li hr{
@@ -506,11 +520,12 @@ body{
 .projetos__ul{
     display: flex;
     flex-wrap: wrap;
+    position: static;
     flex-basis: 50%;
-    box-sizing: border-box;
-    justify-content: center;
-    gap: 50px 30px;
+    justify-content: space-evenly;
+    gap: 50px 10%;
     padding: 5% 0;
+    flex-shrink: 2;
 }
 
 .pj{
@@ -535,7 +550,7 @@ body{
 
 .pj_img{
     width: 100%;
-    min-height: 188px;
+    height: auto;
     transition: transform 0.3s; 
 }
 
@@ -572,7 +587,8 @@ body{
 }
 
 .popup_Img{
-    width: 90%;
+    width: auto;
+    height: auto;
 }
 
 .popup_desc{
@@ -632,11 +648,6 @@ body{
     color: var(--bkc);
     
 }
-
-
-
-
-
 
 
 /*------------------------------entre em contato-------------------------*/
@@ -712,7 +723,7 @@ input[type=email]:focus {
 }
 
 .dados{
-    padding-top: 50px;
+    padding: 100px 0 50px 0;
     display: flex;
     align-items: start;
     justify-content: center;
@@ -722,7 +733,7 @@ input[type=email]:focus {
 .cidade,
 .email,
 .tel{
-    min-width: 220px;
+    min-width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -745,24 +756,25 @@ input[type=email]:focus {
 .cidade svg,
 .email svg,
 .tel svg{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     & :hover{
         fill: var(--deg);
     }
 }
 
 .redes{
-    
     color: var(--color);
     background-color: var(--bkc);
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
     padding: 0 15px;
+    justify-content: center;
 }
 
 .redes_ul{
+    padding: 0;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -797,6 +809,129 @@ strong{
     height: 20px;
     
 }
+
+/*------------------------------------mobile-------------------------------*/
+
+@media (max-width: 767px) {
+    *{
+        font-size: 12px;
+        margin: 0;
+    }
+    
+    #logo{
+        display: none;
+    }
+
+    #header{
+        padding: 25px 0;
+    }
+    
+    #blk__wth{
+        position: fixed;
+        bottom: 1%;
+        right: 1%;
+    }
+
+    .header__list{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header__list__form{
+        padding: 0;
+    }
+
+    .header__list__form ul{
+        padding: 0;
+    }
+    .dados{
+        max-width: 10%;
+    }
+
+    .mid__saudacao{
+        padding: 250px 0;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .servicos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sobre_mim_2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tech{
+        width: 100%;
+    }
+    .tecnologias{
+        padding: 0;
+    }
+    .tecnologias button{
+        padding: 10px;
+    }
+    .sobre_mim_texto{
+        width: 80%;
+        padding: 30px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        border: 0 10px hidden;
+    }
+    .sobre_mim_texto hr{
+       display: none;
+    }
+
+
+    .close{
+        top: -2px;
+    }
+
+    .popup-content{
+        width: 70%;
+    }
+
+    .btn-green{
+        
+    }
+
+    .main__image{
+        max-width: 100%;
+    }
+
+    .sobre_mim_div{
+        flex-direction: column;
+        gap: 20px;
+        font-size: 15px;
+    }
+
+    .contato{
+        align-items: center;
+    }
+
+    .formulario{
+        text-align: center;
+        width: 80%;
+    }
+
+    .dados{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+
+
+
 
 
 
