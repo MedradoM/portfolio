@@ -48,7 +48,7 @@ for (let i = 0; i < techBtn.length; i++){
         }
 
         botao.addEventListener("mouseleave", ()=>{
-            linha = ["Skills", "<strong> Passe o mouse sobre minhas habilidades para ter mais detalhes </strong>", ""]
+            linha = ["Skills", "<strong> Clique/Passe o mouse sobre minhas habilidades para ter mais detalhes </strong>", ""]
             mudaTexto(linha)
         })
 
