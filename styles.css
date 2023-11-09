@@ -926,6 +926,14 @@ strong{
         align-items: center;
     }
 
+    .projetos__ul{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .pj{
+        max-width: 70%;
+    }
 
 }
 
